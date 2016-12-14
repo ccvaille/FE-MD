@@ -43,8 +43,8 @@
 
 ---
 ### 参考链接
-[What does .container.\31 25\25 mean in CSS?][1]
-[css中这样选择器中\+数字是什么意思？][2]
+ - [What does .container.\31 25\25 mean in CSS?][1]
+ - [css中这样选择器中\+数字是什么意思？][2]
  
 
 
