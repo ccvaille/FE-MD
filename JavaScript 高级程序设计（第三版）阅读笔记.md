@@ -164,10 +164,108 @@
     }
     ```
     （17.01.24）
+    - for 语句
+    ```
+    for(initialization; expression; post-loop-expression) {
+        statement
+    }
+    ```
     
+    - for-in 语句
+    ```
+    for(property in expression ) statement
+    ```
+    
+    - break / continue 语句
+        - break: 立即退出循环，强制继续执行循环后面的语句
+        - continue: 立即退出循环，从循环顶部继续执行
+        
+    - switch 语句
+    ```
+    switch (expression) {
+        case value : statement
+        break;
+        
+        case value : statement
+        break;
+        
+        default : statement
+    }
+    ```
+    
+- 函数
+    - 参数
+        - arguments[0]
+        - arguments[1]
+        ```
+            function sum(a,b){ arguments[1] = 2; console.log(a+b)} 
+            sum(1) // NaN
+            sum(1,1) // 3 
+            
+        ```
+        
+### 第四章：变量、作用域和内存问题
+- 基本类型和引用类型的值
+    - 基本类型（保存在栈内存中）
+        - undefined
+        - null
+        - string
+        - number
+        - boolean
+    - 引用类型（保存在堆内存中）
+        - 保存在内存的对象
+        （17.02.02)
+            - 复制变量值 => 两个对象相同的值
+            ```
+            var num = 5;
+            var num2 = num;
+            
+            ```
+            
+            - 重新赋值 => 变量引用用的是同一个对象
+            ```
+            var obj1 = new Object();
+            var obj2 = obj1;
+            obj1.name = 'coolfe';
+            console.log(obj2.name); // coolfe
+            
+            ```
+            
+            - 传递参数
+            > 访问变量有按值和按引用两种方法
+            > **参数只能按值传递**
+            
+            ```
+            function setname (obj) {
+	            obj.name = 'coolfe';
+            	obj = new Object();
+	            obj.name = 'setname'
+	            console.log(obj.name); // setname
+            }
+            var person = new Object();
+            setname(person);
+            console.log(person.name); // coolfe
+            
+            ```
+            **当在函数内重写 obj 的时候，这个变量引用的是一个局部变量，在函数执行完毕后销毁**
+            （17.02.03)                    
+            
+- 作用域
+    - 延长作用域链(?)
+        - try-catch 语句的 catch 块
+        - with 语句
+    - 查询标识符
+    > 从当前的位置向上逐级查询匹配项，局部环境没有找到，会沿作用域往上搜索，一直追溯到全局环境的变量对象
+- 垃圾收集
+> 局部变量只在函数执行的过程中存在，在函数中使用变量，直到函数执行结束。
+
+- 管理内存
+> 确保占用最少的内存让页面获得更好的性能
+> 优化内存占用的最佳方式就是执行中的代码只保存必要的数据，没用的数据将其设置为 null = 解除引用
+
+（17.02.05)  
+
                 
-            
-            
         
             
             
