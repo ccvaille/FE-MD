@@ -265,6 +265,48 @@
 
 （17.02.05)  
 
+## 引用类型（一种数据结构）
+> 引用类型的值（对象）是引用类型的一个实例
+
+- object 类型
+    - 创建
+    ```
+     var person = new Object();  // 可以写成  var person＝{ }
+     person.name = "coolfe";
+     person.age = 24;
+         
+     var person = {
+     name : "coolfe",
+     age : 24   //最后一个属性不能添加逗号，导致 IE7 以前版本错误
+    }
+         
+    ```
+    －　访问属性
+    ```
+    person.name  == person["name"] //访问的属性以字符串的形式放在方括号里面
+    ```
+
+- Array 类型 
+    - 创建
+    ```
+    var colors = new array( [length] | [content]);
+    ```
+    - 操作 
+        - 栈方法 （LIFO - Last-in-first-out）
+            - push() //添加到数组末尾，增加长度
+            - pop() // 移除最后一个，减少长度
+        - 队列方法（FIFO - First-in-first-out）
+            - shift() //移除第一个，减少长度
+            - push()
+            - unshift() //添加到数组前端，增加长度
+        - 重排序方法
+            - reverse() //反转顺序
+            - sort() // 升序排列
+        - concat() // 创建当前数组副本，添加新数组在副本末端，返回新构造数组
+        - slice(起始位置，结束位置) // **返回起始和结束位置之间的项，但不包括结束位置的项**
+   （17.02.06)       
+         
+
                 
         
             
