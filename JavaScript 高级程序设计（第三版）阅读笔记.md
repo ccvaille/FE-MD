@@ -267,7 +267,7 @@
 （17.02.05)  
 
 ---
-## 引用类型（一种数据结构）
+### 第五章：引用类型（一种数据结构）
 > 引用类型的值（对象）是引用类型的一个实例
 
 - object 类型
@@ -335,7 +335,69 @@
             - reduceRight()
 - Date 类型
 （17.02.09)
+```
+var now = new Date();
+console.log(now.getTime())  // 1486820460396
+console.log(now.getDate()) // 11
+now.setDate(12)
+console.log(now.getDate()) //12
+```
 
+- RegRxp 类型 (pass)
+- Function 类型
+    - 函数末有分号
+
+    ```
+    function sum(a,b) {
+        return a + b;
+        }
+    var other  = sum // 访问函数指针，而非执行函数
+    ```
+    - 函数声明和函数表达式
+        - 解析器会优先读取函数声明到最前面
+    - 函数内部属性
+        - arguments: 类数组，包括传进函数的所有参数
+            - callee 属性
+            ```
+            function factorial(num){
+                if(num <= 1){
+                    return 1;
+                } else {
+                return num * factorial(num - 1)
+                }
+            }    
+            ```
+            ```
+            function factorial(num){
+                if(num <= 1) {
+                    return 1;
+                    } else {
+                    return num * arguments.callee(num - 1)
+                    }
+                }    
+            ```
+            
+        - this
+    - 函数的属性和方法
+        - length 属性  // 接收参数个数
+        - prototype 属性（下章介绍）
+        - call 方法  //改变函数的调用对象
+            - 传递给函数的参数必须逐个列举
+        - apply 方法 //改变函数的调用对象
+            - apply(改变后的调用这个函数的对象), 空代表调用全局对象： window
+            
+    - 基本包装类型
+    **包装类型，才能让我们看起来在一个普通的字符串上调用方法。实际上是生成了包装类型的一个实例，然后调用了这个方法**
+    ```
+    var a = "this is a test"
+    a.color = "red"
+    console,log(a.color) //undefined
+    ```
+    不能为基本类型添加属性和方法
+    （17.03.26)
+    
+
+    
                 
         
             
