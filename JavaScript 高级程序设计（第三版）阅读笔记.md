@@ -396,6 +396,82 @@ console.log(now.getDate()) //12
     不能为基本类型添加属性和方法
     （17.03.26)
     
+## 第六章：面向对象的程序设计
+- 对象
+```
+var person = new Object();
+person.name = "coolfe";
+person.age = 20;
+person.syaname = function() {
+    console.log(this.name);
+} //  三个属性，一个方法
+```
+
+```
+// 对象字变量
+person = {
+    name : "coolfe",
+    age : 20,
+    sayname: function(){
+        console.log(this.name);
+    }
+```
+
+- 属性类型（past）
+    - 包括一个数据值的位置，允许读取和写入
+    - [[configurable]] : 能否修改属性的特性
+    - …… （重读来补上）
+- 访问器属性（past）
+     （17.03.28)
+
+- ## 创建对象
+    - 工厂模式
+    ```
+    function createPeason(name,age,job) {
+        var peason = new Object();
+        peason.name = name;
+        peason.age = age;
+        peason.job = job;
+        peason.sayName = function(){
+            console.log(this.name);
+            };
+        return 0;
+    }
+    var a = createPeason('coolfe',24,'fe');
+    ```
+    - 构造函数模式(没有显式创建对象，没有 return 语句 ）
+    > 任何函数，只要通过 new 操作符来调用，就可以称为构造函数，反之，就是普通函数
+    
+    ```
+    function CreatePeason(name,age,job) {
+        this.name = name;
+        this.age = age;
+        this.job = job;
+        this.sayName = function() {
+            console.log(this.name);
+        }
+    }
+    var a = new CreatePeason('coolfe',24,'fe');
+    var b = new CreatePeason('sandy',24,'design');
+    ```
+    
+    ```
+    function Person(name,age,job) {
+        this.name = name;
+        this.age = age;
+        this.job = job;
+        this.sayName = sayName;
+    }
+    function sayName() {
+        console.log(this.name);
+    }
+    
+    var a = new Person('coolfe',24,'fe');
+    var b = new Person('sandy',24,'design');
+
+    ```
+    (17.04.06)
+            
 
     
                 
