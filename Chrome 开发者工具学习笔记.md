@@ -29,6 +29,8 @@
     - 内存堆区分析器
 - Application(资源面板)
     - 管理数据(Cookie,img,font,css,Web SQL...)
+    - Manifest: 将您的应用添加到他们的移动设备的主屏幕中
+    - Service Workers: 在浏览器后台运行的脚本，与网页分离
 - Security(安全面板)
     - 安全证书
 
@@ -55,7 +57,7 @@
         ```
         console.log("%cThis will be formatted with large, blue text", "color: blue; font-size: x-large");
         ```
-        - ctrl + L: 清除控制台
+        - Ctrl + L: 清除控制台
     - Coverage 查看代码覆盖率
     - Network conditions 配置网络条件
     - **Remote devices 远程安卓设备**
@@ -66,7 +68,33 @@
     - Search 搜索字符串和文件
     - Sensors 模拟移动传感器
     - What's New
+- 实验性功能
+    - chrome://flags/#enable-devtools-experiments
 
+### 快捷键
+- 刷新页面并清除缓存: Ctrl + F5, Ctrl + Shift + R (Cmd + Shift + R)
+- 切换颜色值表示法 Shift + 颜色选择器
+- 跳转到行: Ctrl + G (Cmd + G)
+- 转到匹配的括号: Ctrl + M
+- 查看历史页: Ctrl + H (Cmd + Y)
+- 查看下载页面: Ctrl + J (Cmd + Shift + J)
+- 选中地址栏内容: F6, Ctrl + L, Alt + D (Cmd + L, Opt + D)
+
+### CSS 样式 
+- :root
+    - 查看 html 元素
+    - 声明全局 CSS 变量
+    - 
+    ```
+    :root {
+        --primary-color: blue;
+        --color: #fff;
+    }
+    p {
+        color: var(--color);
+        background: var(--primary-color);
+    }
+    ```
 
 ### 參考链接
 - https://developers.google.com/web/tools/chrome-devtools/
