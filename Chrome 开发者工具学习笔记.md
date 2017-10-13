@@ -99,5 +99,5 @@
 ### 參考链接
 - https://developers.google.com/web/tools/chrome-devtools/
 - https://www.w3cplus.com/tools/how-to-use-chrome-devtools-like-a-pro.html
-- http://wiki.jikexueyuan.com/project/chrome-devtools/debugging-javascript.html
+- http://www.css88.com/doc/chrome-devtools/javascript/step-code/
 - http://wiki.jikexueyuan.com/project/chrome-devtools/using-the-timeline.html
