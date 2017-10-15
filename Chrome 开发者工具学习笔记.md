@@ -20,6 +20,7 @@
     - Step into（逐过程）：和逐语句类似，但是点击逐过程会在函数调用时,令调试器将执行转到所调用的函数声明中去
     - Step out：当使用逐过程进入某个函数内部后，点击该按钮会跳过该函数声明的剩余部分，调试器会将执行过程移动到其父函数中
     - Toggle breakpoints：切换断点启用、禁用状态，同时保证各自的启用状态不会受到影响
+    - 命名函数可以提高调用堆栈的可读性
 - Network(网络面板)
     - 请求和下载的资源文件
 - Performance(性能面板)
@@ -48,7 +49,6 @@
 - 抽屉式选项卡(Esc 控制开启或关闭)
     - Animations 动画检查器    
     - Console 控制台
-        - $0: 当前鼠标选中元素
         - console.table()
         ```
         console.table([{a:1, b:2, c:3}, {a:"foo", b:false, c:undefined}]);
@@ -58,6 +58,7 @@
         console.log("%cThis will be formatted with large, blue text", "color: blue; font-size: x-large");
         ```
         - Ctrl + L: 清除控制台
+        - console.assert() 仅当它第一个参数求值为false时，才显示一个错误信息字符串（它的第二个参数）
     - Coverage 查看代码覆盖率
     - Network conditions 配置网络条件
     - **Remote devices 远程安卓设备**
@@ -95,6 +96,12 @@
         background: var(--primary-color);
     }
     ```
+### 命令行 API 参考
+- $_: 返回最近一次计算的表达式的值
+- $0 - $4: 返回最近检查的最后五个 DOM 元素 
+- $(selector): 返回匹配指定 CSS 选择器的第一个 DOM 元素的引用（document.querySelector()）
+- $$(selector): document.querySelectorAll()
+- debug(function): debug(getData);
 
 ### 參考链接
 - https://developers.google.com/web/tools/chrome-devtools/
