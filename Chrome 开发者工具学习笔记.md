@@ -103,6 +103,16 @@
 - $$(selector): document.querySelectorAll()
 - debug(function): debug(getData);
 
+
+### Sublime 
+- Autoprefixer
+    - Ctrl + Shift + P , Autoprefix CSS
+- Emmet
+    - https://emmet.io/
+- HTML-CSS-JS prettify
+- Git Gutter
+- Gutter Color
+
 ### 參考链接
 - https://developers.google.com/web/tools/chrome-devtools/
 - https://www.w3cplus.com/tools/how-to-use-chrome-devtools-like-a-pro.html
