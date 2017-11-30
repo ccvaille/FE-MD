@@ -63,3 +63,21 @@ props – 为 null 或一个对象
 content – null、字符串、React 元素或 React 组件
 
     - 你在此处传递的任何内容都将为所渲染元素的内容。包括纯文本、JavaScript 代码、其他 React 元素等。
+
+- 无状态函数式组件
+```
+class Email extends React.Component {
+  render() {
+    return (
+      <div>
+        {this.props.text}
+      </div>
+    );
+  }
+};
+const Email = (props) => (
+  <div>
+    {props.text}
+  </div>
+);
+```
