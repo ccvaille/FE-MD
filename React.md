@@ -1,4 +1,4 @@
-## React
+## Udacity - React
 - 命令式代码告诉 JavaScript 如何执行每个步骤。
 - 对于声明式代码，我们告诉 JavaScript 我们希望实现什么结果，让 JavaScript 处理每个步骤。
 - React 是声明式代码，因为我们编写代码来声明我们想要什么，React 负责处理声明的代码，并执行所有的 JavaScript/DOM 步骤来实现我们期望的结果
@@ -81,3 +81,59 @@ const Email = (props) => (
   </div>
 );
 ```
+
+- 生命周期
+  - componentWillMount() // 插入 DOM 之前立即调用
+  - componentDidMount() // 插入 DOM 之后立即调用
+  - componentWillUnmount // DOM 移除之前立即调用
+  - componentWillRecieveProps // 即将接收全新的 Props 时调用
+
+- 添加到 DOM 中
+  - 当组件正在被添加到 DOM 中时，这些生命周期事件被调用：
+
+```
+constructor()
+componentWillMount()
+render()
+componentDidMount()
+```
+
+- 重新渲染-rendering
+  - 当组件正在重新渲染到 DOM 时，这些生命周期事件被调用
+```
+componentWillReceiveProps()
+shouldComponentUpdate()
+componentWillUpdate()
+render()
+componentDidUpdate()
+```
+
+- 从 DOM 中删除
+  - 当组件正在从 DOM 中被删除时，以下生命周期事件被调用
+```
+componentWillUnmount()
+```
+
+
+```
+{this.state.screen === 'list' && (
+  <div>List<div>
+)}
+```
+
+
+## Udacity - React-Router
+- BrowserRouter
+- Link
+  - <Link to="/about">About</Link>
+- Route
+  - <Route path="/" exact render={()>{component 有参数}}></Route>
+  - <Route path="/create" component={<CreateContact>}></Route>
+
+## 项目
+  - https://github.com/udacity/reactnd-project-myreads-starter
+
+## 参考链接
+- https://reacttraining.com/react-router/
+- https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Short-Circuit_Evaluation
+- https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions
